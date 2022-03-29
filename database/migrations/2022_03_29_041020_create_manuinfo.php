@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchaseinfo', function (Blueprint $table) {
+        Schema::create('manuinfo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('Invoice_num');
-            $table->string('price');
-            $table->string('purchase_date');
-            
+            $table->string('name');
+            $table->string('dept');
+            $table->string('number');
+            $table->string('email')
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchaseinfo');
+        Schema::dropIfExists('manuinfo');
     }
 };
