@@ -21,7 +21,6 @@ return new class extends Migration
             $table->foreignId('manu_id');
             $table->foreignId('user_id');
             $table->foreignId('purchase_id');
-            
         });
     }
 
