@@ -13,16 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/db-test', function () {
-    try {         
-         echo \DB::connection()->getDatabaseName();     
-    } catch (\Exception $e) {
-          echo 'None';
-    }
-});
-
 URL::forceScheme('https');
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/', function () {
     return view('welcome');
