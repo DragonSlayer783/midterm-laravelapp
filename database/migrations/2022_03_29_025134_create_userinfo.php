@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('noteshist', function (Blueprint $table) {
+        Schema::create('userinfo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('services');
-            $table->string('software');
-            $table->string('updates');
+            $table->string('name');
+            $table->string('number');
+            $table->string('email');
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('noteshist');
+        Schema::dropIfExists('userinfo');
     }
 };
