@@ -24,7 +24,7 @@ class EquipmentinfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
         $form = $formBuilder->create(EquipmentinfoForm::class, [
             'method' => 'POST',
