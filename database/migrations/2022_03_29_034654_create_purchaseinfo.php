@@ -16,10 +16,12 @@ return new class extends Migration
         Schema::create('purchaseinfo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('Invoice_num');
+            $table->integer('invoice_num');
             $table->string('price');
             $table->string('purchase_date');
             $table->foreignId('customer_id')->constrained("customers");
+            $table->foreignId('equipment_id')->constrained("equipmentinfo");
+
             
         });
     }
