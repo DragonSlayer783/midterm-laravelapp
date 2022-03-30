@@ -22,7 +22,7 @@ URL::forceScheme('https');
 
 Route::resource('/customers', CustomersController::class);
 Route::resource('/manufacturer', ManufacturerController::class);
-Route::resource('/equipmentinfo', EquipmentinfoController::class);
+Route::resource('/equipment', EquipmentinfoController::class);
 Route::resource('/purchaseinfo', PurchaseinfoController::class);
 Route::resource('/note', NoteshistoryController::class);
 
