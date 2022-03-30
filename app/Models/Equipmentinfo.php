@@ -26,7 +26,7 @@ class Equipmentinfo extends Model
     public function purchaseinfo()
     {
 
-        return $this->belongsto(Purchaseinfo::class);
+        return $this->hasMany(Purchaseinfo::class);
 
     }
    
