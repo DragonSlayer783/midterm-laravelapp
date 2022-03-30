@@ -11,6 +11,7 @@ class Equipmentinfo extends Model
 
     protected $fillable = ['name','model_year', 'speed', 'manu_id'
     ,'customer_id','purchase_id'];
+    protected $table = 'equipmentinfo';
 }
 
 

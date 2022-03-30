@@ -10,5 +10,6 @@ class Manuinfo extends Model
     use HasFactory;
 
     protected $fillable = ['name','dept', 'number','email'];
+    protected $table = 'manuinfo';
 
 }

@@ -9,5 +9,6 @@ class Noteshistory extends Model
 {
     use HasFactory;
     protected $fillable = ['device_id','services', 'software','updates'];
+    protected $table = 'noteshist';
 }
 
