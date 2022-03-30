@@ -240,7 +240,7 @@ return [
         ],
         [         
             'text' => 'Manage Equipment',
-            'url'  => 'equipment',
+            'url'  => 'equipmentinfo',
             'icon' => 'fas fa-fw fa-file',
         ],
         [
