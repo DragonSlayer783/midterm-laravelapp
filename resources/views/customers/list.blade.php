@@ -20,7 +20,7 @@
         <tr>
           <td>{{ $customer->id }}</td>
           <td>{{ $customer->name }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('customers.show',['customers'=>$customer->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('customers.show',['customer'=>$customer->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
