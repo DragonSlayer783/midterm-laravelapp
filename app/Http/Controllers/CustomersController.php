@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Customers;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customers::all();
+        return view('customer.list', compact('customers'));
     }
 
     /**
