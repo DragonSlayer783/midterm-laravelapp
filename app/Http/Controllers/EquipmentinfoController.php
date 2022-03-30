@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Equipmentinfo;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\EquipmentinfoForm;
 use Illuminate\Http\Request;
 
 class EquipmentinfoController extends Controller
