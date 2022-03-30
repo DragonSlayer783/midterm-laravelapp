@@ -21,7 +21,7 @@ class CustomerForm extends Form
                 ])
                 ->add('email', Field::TEXT, [
                     'rules' => 'required',
-                    'label' => 'EMail'
+                    'label' => 'Email'
                 ])
                 ->add('submit', 'submit',[
                     'label' => 'Submit'
