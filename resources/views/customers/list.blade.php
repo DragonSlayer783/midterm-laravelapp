@@ -9,7 +9,7 @@
 @section('content')
 <div class="card">
   <div class="card-body">
-    <table id="table" class="table table-bordered">
+    <table id="table" class="table table-bordered sortable">
       <thead>
         <tr>
           <th style="width: 10px">#</th><th>Name</th><th style="width: 40px">Action</th>
@@ -28,4 +28,8 @@
   </div>
 </div>
 <a href="{{ route('customers.create') }} " class="btn btn-primary" >Create</a>
+@stop
+
+@section('js')
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 @stop
