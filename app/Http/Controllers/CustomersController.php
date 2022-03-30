@@ -31,7 +31,7 @@ class CustomersController extends Controller
             'method' => 'POST',
             'url' => route('customers.store')
         ]);
-        return view('customer.create', compact('form'));
+        return view('customers.create', compact('form'));
     }
 
     /**
@@ -42,7 +42,11 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $form = $formBuilder->create(CustomerForm::class);
+        $form->redirectIfNotValid();
+        Customers::create($form->getFieldValues());
+        return $this->index();
     }
 
     /**
@@ -53,11 +57,12 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
-        //
+        $customers = Customers::find($id);
+        return view('customers.detail', compact('customers'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified resource
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
