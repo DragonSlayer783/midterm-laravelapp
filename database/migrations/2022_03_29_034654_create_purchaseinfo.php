@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('purchase_date');
             $table->foreignId('equipment_id')->constrained("equipmentinfo");
+            $table->foreignId('customer_id')->constrained("customers");
 
             
         });
