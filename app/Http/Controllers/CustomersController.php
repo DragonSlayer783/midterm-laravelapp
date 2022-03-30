@@ -25,9 +25,13 @@ class CustomersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(CustomerForm::class, [
+            'method' => 'POST',
+            'url' => route('customers.store')
+        ]);
+        return view('customer.create', compact('form'));
     }
 
     /**
