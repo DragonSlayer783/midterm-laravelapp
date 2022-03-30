@@ -28,9 +28,9 @@ class EquipmentinfoController extends Controller
     {
         $form = $formBuilder->create(EquipmentinfoForm::class, [
             'method' => 'POST',
-            'url' => route('equipmentinfo.store')
+            'url' => route('equipment.store')
         ]);
-        return view('equipmentinfo.create', compact('form'));
+        return view('equipment.create', compact('form'));
     }
 
     /**
