@@ -11,6 +11,16 @@ class Purchaseinfo extends Model
     protected $fillable = ['invoice_num','price', 'purchase_date','equipment_id'];
 
     protected $table = 'purchaseinfo';
+
+    public function Equipmentinfo()
+    {
+        return $this->belongsTo(Equipmentinfo::class);
+    }
+
+    public function Customers()
+    {
+        return $this->belongsTo(Customers::class);
+    }
     
     
 }
