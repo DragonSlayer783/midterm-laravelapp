@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 URL::forceScheme('https');
 
+Route::get('/db-migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
+
 Route::get('/db-test', function () {
     try {         
          echo \DB::connection()->getDatabaseName();     
@@ -27,6 +32,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
