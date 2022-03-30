@@ -9,7 +9,7 @@ class Equipmentinfo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','model_year', 'speed', 'manu_id'];
+    protected $fillable = ['name','model_year', 'speed', 'category', 'manu_id'];
     protected $table = 'equipmentinfo';
 
     public function notes()

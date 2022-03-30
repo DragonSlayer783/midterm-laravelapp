@@ -20,15 +20,15 @@
             <dt class="col-sm-3">Manufacturer</dt>
             <dd class="col-sm-9">
                 <a href="{{ route('manuinfo.show',['manufacturer'=>$equipmentinfo->manuinfo->id]) }}">
-                    {{ $equipmentinfo->manufacturer->name }}
+                    {{ $equipmentinfo->manuinfo->name }}
                 </a>
             </dd>
 
-            <dt class="col-sm-3">GHz</dt>
-            <dd class="col-sm-9">{{ $equipmentinfo->ghz }}</dd>
+            <dt class="col-sm-3">Speed</dt>
+            <dd class="col-sm-9">{{ $equipmentinfo->speed }}</dd>
 
-            <dt class="col-sm-3">Ram</dt>
-            <dd class="col-sm-9">{{ $equipmentinfo->ram }}</dd>
+            <dt class="col-sm-3">Model_year</dt>
+            <dd class="col-sm-9">{{ $equipmentinfo->model_year }}</dd>
 
             <dt class="col-sm-3">Category</dt>
             <dd class="col-sm-9">{{ ucwords($equipmentinfo->category) }}</dd>
