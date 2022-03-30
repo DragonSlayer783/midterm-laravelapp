@@ -35,7 +35,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('equipmentinfo.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('equipment.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 
