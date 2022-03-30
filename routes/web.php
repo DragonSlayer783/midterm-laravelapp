@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\ManufacturerController;
-use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\EquipmentinfoController;
 use App\Http\Controllers\PurchaseinfoController;
 use App\Http\Controllers\NoteshistoryController;
 
@@ -22,7 +22,7 @@ URL::forceScheme('https');
 
 Route::resource('/customers', CustomersController::class);
 Route::resource('/manufacturer', ManufacturerController::class);
-Route::resource('/equipment', EquipmentController::class);
+Route::resource('/equipment', EquipmentinfoController::class);
 Route::resource('/purchaseinfo', PurchaseinfoController::class);
 Route::resource('/note', NoteshistoryController::class);
 
