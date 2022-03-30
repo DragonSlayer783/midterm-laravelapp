@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Noteshistory extends Model
 {
     use HasFactory;
+    protected $fillable = ['device_id','services', 'software','updates'];
 }
+
