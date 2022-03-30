@@ -13,7 +13,7 @@ class EquipmentinfoController extends Controller
      */
     public function index()
     {
-        $equipmentinfo = Equipment::all();
+        $equipmentinfo = Equipmentinfo::all();
         return view('equipmentinfo.list', compact('equipmentinfo'));
     }
 
