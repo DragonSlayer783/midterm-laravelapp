@@ -12,4 +12,9 @@ class Manuinfo extends Model
     protected $fillable = ['name','dept', 'number','email'];
     protected $table = 'manuinfo';
 
+    public function equipments()
+    {
+        return $this->hasMany(Equipmentinfo::class);
+    }
+
 }

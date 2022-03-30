@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('model_year');
             $table->string('speed');
             $table->foreignId('manu_id')->constrained('manuinfo');
-            $table->foreignId('notes_id')->constrained("noteshist");
+            $table->foreignId('purchase_id')->constrained("purchaseinfo");
         });
     }
 

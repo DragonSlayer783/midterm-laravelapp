@@ -12,5 +12,6 @@ class Purchaseinfo extends Model
 
     protected $table = 'purchaseinfo';
     
+    
 }
 

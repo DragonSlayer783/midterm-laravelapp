@@ -12,6 +12,25 @@ class Equipmentinfo extends Model
     protected $fillable = ['name','model_year', 'speed', 'manu_id'
     ,'notes_id'];
     protected $table = 'equipmentinfo';
+
+    public function notes()
+    {
+        return $this->hasMany(Noteshistory::class);
+    }
+
+    public function manufacturer()
+    {
+        return $this->belongsTo(Manuinfo::class);
+    }
+
+    public function purchaseinfo()
+    {
+
+        return $this->belongsto(Purchaseinfo::class);
+
+    }
+   
+
 }
 
 

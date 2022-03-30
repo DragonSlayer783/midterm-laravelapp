@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('noteshist', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('equimpment_id')->constrained('equipmentinfo')->onDelete('cascade');
+            $table->foreignId('equipment_id')->constrained('equipmentinfo')->onDelete('cascade');
             $table->string('services');
             $table->string('software');
             $table->string('updates');
