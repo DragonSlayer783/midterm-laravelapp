@@ -15,13 +15,11 @@
         </div>
         <dl class="row">
             <dt class="col-sm-3">Price</dt>
-            <dd class="col-sm-9">${{ $equipmentinfo->price }}</dd>
+            <dd class="col-sm-9">${{ $equipmentinfo->price }}
+            </dd>
 
             <dt class="col-sm-3">Manufacturer</dt>
-            <dd class="col-sm-9">
-                <a href="{{ route('manuinfo.show',['manufacturer'=>$equipmentinfo->manuinfo->id]) }}">
-                    {{ $equipmentinfo->manuinfo->name }}
-                </a>
+            <dd class="col-sm-9">{{#equipmentinfo->manuinfo->name}}
             </dd>
 
             <dt class="col-sm-3">Speed</dt>
