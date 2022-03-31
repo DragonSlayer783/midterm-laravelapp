@@ -3,6 +3,7 @@
 namespace App\Forms;
 
 use Kris\LaravelFormBuilder\Form;
+use Kris\LaravelFormBuilder\Field;
 
 class ManuinfoForm extends Form
 {
