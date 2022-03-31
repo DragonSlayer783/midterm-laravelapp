@@ -46,6 +46,7 @@
         </form>
     </span>
 
+    <!--
     <table id="table" class="table table-bordered" style=" margin-bottom:10px;">
       <thead>
         <tr>
@@ -80,7 +81,7 @@
         @endforeach
       </tbody>
     </table>
-
+-->
 
   </div>
 </div>
