@@ -13,7 +13,8 @@ class PurchaseinfoController extends Controller
      */
     public function index()
     {
-        //
+        $purchaseinfos = purchaseinfo::all();
+        return view('purchaseinfo.list', compact('purchaseinfos'));
     }
 
     /**
@@ -21,9 +22,18 @@ class PurchaseinfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder, Request $request)
     {
-        //
+        $form = $formBuilder->create(purchaseinfoForm::class, [
+            'method' => 'POST',
+            'url' => route('purchaseinfo.store'),
+        ]);
+        $user = $request->get('user', 0);
+        $form->modify('customer_id', "number", [
+            'default_value' => $user,
+        ]);
+        
+        return view('purchaseinfo.create', compact('form'));
     }
 
     /**
@@ -32,9 +42,12 @@ class PurchaseinfoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(purchaseinfoForm::class);
+        $form->redirectIfNotValid();
+        $purchaseinfo = purchaseinfo::create($form->getFieldValues());
+        return $this->index();
     }
 
     /**
@@ -45,7 +58,8 @@ class PurchaseinfoController extends Controller
      */
     public function show($id)
     {
-        //
+        $purchaseinfo = purchaseinfo::find($id);
+        return view('purchaseinfo.detail', compact('purchaseinfo'));
     }
 
     /**
