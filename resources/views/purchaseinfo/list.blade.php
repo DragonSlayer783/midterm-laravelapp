@@ -23,7 +23,7 @@
         @foreach($purchaseinfos AS $purchaseinfo)
         <tr>
           <td>{{ $purchaseinfo->id }}</td>
-          <td>{{ $purchaseinfo->Customers->name }}</td>
+          <td>{{ $purchaseinfo->customer->name }}</td>
           <td>${{ $purchaseinfo->price}}</td>
           <td>{{ $purchaseinfo->purchase_date }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('purchaseinfo.show',['purchaseinfo'=>$purchaseinfo->id]) }}">View</a></td>

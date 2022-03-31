@@ -17,7 +17,7 @@ class Purchaseinfo extends Model
         return $this->belongsTo(Equipmentinfo::class);
     }
 
-    public function Customers()
+    public function customer()
     {
         return $this->belongsTo(Customers::class);
     }
