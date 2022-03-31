@@ -17,8 +17,8 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        $manuinfo = Manuinfo::all();
-        return view('manuinfo.list', compact('manuinfo'));
+        $manuinfos = Manuinfo::all();
+        return view('manuinfo.list', compact('manuinfos'));
     }
 
     /**
