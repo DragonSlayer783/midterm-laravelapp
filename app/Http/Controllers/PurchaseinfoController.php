@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Purhcaseinfo;
+use App\Models\Purchaseinfo;
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Forms\PurchaseinfoForm;
 use Illuminate\Http\Request;
@@ -16,7 +16,7 @@ class PurchaseinfoController extends Controller
      */
     public function index()
     {
-        $purchaseinfo = Purchaseinfos::all();
+        $purchaseinfos = purchaseinfo::all();
         return view('purchaseinfo.list', compact('purchaseinfos'));
     }
 
