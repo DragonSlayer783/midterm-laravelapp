@@ -28,7 +28,7 @@ class ManufacturerController extends Controller
      */
     public function create(FormBuilder $formBuilder)
     {
-        form = $formBuilder->create(ManuinfoForm::class, [
+        $form = $formBuilder->create(ManuinfoForm::class, [
             'method' => 'POST',
             'url' => route('manuinfo.store')
         ]);
