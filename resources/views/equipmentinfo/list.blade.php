@@ -23,7 +23,7 @@
         @foreach($equipmentinfo AS $equipment)
         <tr>
           <td>{{ $equipment->id }}</td>
-          <td>{{ $equipment->manuinfo->name }}</td>
+          <td>{{ $equipment->manu_id}}</td>
           <td>{{ ucwords($equipment->category) }}</td>
           <td>{{ $equipment->name }}</td>
 
