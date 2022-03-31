@@ -43,43 +43,6 @@
         </form>
     </span>
 
-    <!--
-    <table id="table" class="table table-bordered" style=" margin-bottom:10px;">
-      <thead>
-        <tr>
-          <th style="width: 10px">#</th>
-          <th>Service</th>
-          <th>Software</th>
-          <th>Content</th>
-          <th style="width: 150px">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach($equipment->notes AS $note)
-        <tr>
-            <td>{{ $note->id }}</td>
-            <td>{{ $note->service }}</td>
-            <td>{{ $note->software }}</td>
-            <td>{{ $note->content }}</td>
-
-            <td>
-                <span>
-                <a class="btn btn-default btn-sm" href="{{ route('note.show',['note'=>$note->id]) }}">View</a>
-                <a class="btn btn-danger btn-sm"  href="{{ route('note.destroy',['note'=>$note->id]) }}" onclick="event.preventDefault(); document.getElementById('note-submit-{!! $note->id !!}').submit();">Delete</a>
-
-
-                <form id="note-submit-{{ $note->id }}" action="{{ route('note.destroy',['note'=>$note->id]) }}" method="POST" class="hidden">
-                    @csrf
-                    @method('DELETE')
-                </form>
-                </span>
-            </td>
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
--->
-
   </div>
 </div>
 @stop
