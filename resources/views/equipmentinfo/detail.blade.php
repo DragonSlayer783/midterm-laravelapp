@@ -19,7 +19,7 @@
             </dd>
 
             <dt class="col-sm-3">Manufacturer</dt>
-            <dd class="col-sm-9">{{$equipmentinfo->manuinfo->name}}
+            <dd class="col-sm-9">{{$equipmentinfo->manu->name}}
             </dd>
 
             <dt class="col-sm-3">Speed</dt>
