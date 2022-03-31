@@ -26,7 +26,6 @@
           <td>{{ $equipment->manuinfo->name }}</td>
           <td>{{ ucwords($equipment->category) }}</td>
           <td>{{ $equipment->name }}</td>
-          <td>{{ $equipment->num_of_notes() }}</td>
 
           <td><a class="btn btn-default btn-sm" href="{{ route('equipment.show',['equipment'=>$equipment->id]) }}">View</a></td>
         </tr>
