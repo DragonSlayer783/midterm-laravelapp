@@ -16,7 +16,7 @@ class PurchaseinfoController extends Controller
      */
     public function index()
     {
-        $purchaseinfos = Purchaseinfo::all();
+        $purchaseinfos = purchaseinfo::all();
         return view('purchaseinfo.list', compact('purchaseinfos'));
     }
 
