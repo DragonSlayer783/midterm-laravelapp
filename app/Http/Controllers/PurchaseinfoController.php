@@ -31,7 +31,7 @@ class PurchaseinfoController extends Controller
             'method' => 'POST',
             'url' => route('purchaseinfo.store'),
         ]);
-        $user = $request->get('user', 0);
+       // $user = $request->get('user', 0);
         $form->modify('customer_id', "number", [
             'default_value' => $user,
         ]);
