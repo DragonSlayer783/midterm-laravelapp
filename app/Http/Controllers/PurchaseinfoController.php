@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Purhcaseinfo;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\PurchaseinfoForm;
 use Illuminate\Http\Request;
 
 class PurchaseinfoController extends Controller
