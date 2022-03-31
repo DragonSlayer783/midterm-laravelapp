@@ -12,7 +12,7 @@ class Purchaseinfo extends Model
 
     protected $table = 'purchaseinfo';
 
-    public function Equipmentinfo()
+    public function equipmentinfo()
     {
         return $this->belongsTo(Equipmentinfo::class);
     }
