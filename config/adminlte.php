@@ -245,7 +245,7 @@ return [
         ],
         [
             'text' => 'Manufacturers',
-            'url'  => 'manufacturer',
+            'url'  => 'manuinfo',
             'icon' => 'fas fa-fw fa-file',
         ],
     ],

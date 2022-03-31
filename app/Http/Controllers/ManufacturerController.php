@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Manuinfo;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\ManuinfoForm;
+
 use Illuminate\Http\Request;
 
 class ManufacturerController extends Controller
@@ -13,7 +17,8 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        //
+        $manuinfo = Manuinfo::all();
+        return view('manuinfo.list', compact('manuinfo'));
     }
 
     /**
@@ -21,9 +26,13 @@ class ManufacturerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
+        form = $formBuilder->create(ManuinfoForm::class, [
+            'method' => 'POST',
+            'url' => route('manuinfo.store')
+        ]);
+        return view('manuinfo.create', compact('form'));
     }
 
     /**
@@ -32,9 +41,12 @@ class ManufacturerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(ManuinfoForm::class);
+        $form->redirectIfNotValid();
+        Manuinfo::create($form->getFieldValues());
+        return $this->index();
     }
 
     /**
@@ -45,7 +57,9 @@ class ManufacturerController extends Controller
      */
     public function show($id)
     {
-        //
+        $manuinfo = Manuinfo::find($id);
+        // Lazy Loading
+        return view('manuinfo.detail', compact('manuinfo'));
     }
 
     /**
